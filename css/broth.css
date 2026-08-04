@@ -1,1 +1,93 @@
+/*==========================================================
+BROTH
+==========================================================*/
 
+.broth{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:-16px;
+
+    width:385px;
+
+    height:66px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    z-index:5;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at top,
+
+            #ffbe6b,
+
+            #df7b1b 65%,
+
+            #aa5615
+
+        );
+
+    box-shadow:
+
+        inset 0 6px 10px rgba(255,255,255,.20),
+
+        inset 0 -12px 14px rgba(0,0,0,.18);
+
+}
+
+/* Highlight */
+
+.broth-highlight{
+
+    position:absolute;
+
+    width:170px;
+
+    height:26px;
+
+    left:55px;
+
+    top:12px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(255,255,255,.16);
+
+    filter:blur(7px);
+
+}
+
+/* Ripple */
+
+.broth-ripple{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            transparent 58%,
+
+            rgba(255,255,255,.08) 59%,
+
+            transparent 61%
+
+        );
+
+}

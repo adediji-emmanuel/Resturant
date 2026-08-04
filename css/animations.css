@@ -1,1 +1,161 @@
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
 
+/* Lantern Swing */
+
+@keyframes lanternSwing{
+
+    0%{
+
+        transform:rotate(-2deg);
+
+    }
+
+    50%{
+
+        transform:rotate(2deg);
+
+    }
+
+    100%{
+
+        transform:rotate(-2deg);
+
+    }
+
+}
+
+/* Lantern Glow */
+
+@keyframes lanternGlow{
+
+    0%{
+
+        opacity:.75;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.75;
+
+    }
+
+}
+
+/* Fog */
+
+@keyframes fogFloat{
+
+    from{
+
+        transform:translateX(-120px);
+
+    }
+
+    to{
+
+        transform:translateX(120px);
+
+    }
+
+}
+
+/*==========================================================
+PREMIUM STEAM
+==========================================================*/
+
+@keyframes steamRise{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(.4)
+            rotate(-6deg);
+
+        filter:blur(6px);
+
+    }
+
+    10%{
+
+        opacity:.45;
+
+    }
+
+    20%{
+
+        transform:
+            translateY(-35px)
+            translateX(-6px)
+            scale(.65)
+            rotate(4deg);
+
+    }
+
+    40%{
+
+        opacity:.65;
+
+        transform:
+            translateY(-90px)
+            translateX(12px)
+            scale(.9)
+            rotate(-8deg);
+
+        filter:blur(9px);
+
+    }
+
+    60%{
+
+        transform:
+            translateY(-160px)
+            translateX(-10px)
+            scale(1.25)
+            rotate(10deg);
+
+        opacity:.45;
+
+    }
+
+    80%{
+
+        transform:
+            translateY(-240px)
+            translateX(18px)
+            scale(1.7)
+            rotate(-12deg);
+
+        filter:blur(15px);
+
+        opacity:.18;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-320px)
+            translateX(-14px)
+            scale(2.3)
+            rotate(15deg);
+
+        filter:blur(22px);
+
+        opacity:0;
+
+    }
+
+}

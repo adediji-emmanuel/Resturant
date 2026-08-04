@@ -1,0 +1,135 @@
+/* ==========================================================
+   WOODEN TABLE
+========================================================== */
+
+.table{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:260px;
+
+    overflow:hidden;
+
+    z-index:var(--z-table);
+
+}
+
+/* Wood */
+
+.table::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        #4d2d18,
+
+        #392111
+
+    );
+
+}
+
+/* Grain */
+
+.table::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.12;
+
+    background:
+
+    repeating-linear-gradient(
+
+        90deg,
+
+        transparent 0,
+
+        transparent 18px,
+
+        rgba(255,255,255,.09) 19px,
+
+        transparent 22px
+
+    );
+
+}
+
+/* Reflection */
+
+.reflection{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:-40px;
+
+    width:700px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        ellipse,
+
+        rgba(255,255,255,.16),
+
+        transparent 70%
+
+    );
+
+    filter:blur(20px);
+
+}
+
+/* Bowl Light */
+
+.table-light{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:-100px;
+
+    width:900px;
+
+    height:260px;
+
+    background:
+
+    radial-gradient(
+
+        ellipse,
+
+        rgba(255,180,90,.15),
+
+        transparent 70%
+
+    );
+
+}

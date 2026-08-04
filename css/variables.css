@@ -1,1 +1,119 @@
+/* ==========================================================
+   THE SOUL OF RAMEN
+   Design System
+========================================================== */
 
+:root{
+
+    /*==============================
+      COLORS
+    ==============================*/
+
+    --color-bg:#06070B;
+    --color-bg-2:#0F121A;
+    --color-bg-3:#1A202D;
+
+    --color-wood:#402818;
+    --color-wood-light:#6B4327;
+
+    --color-bowl:#F6F2EA;
+    --color-bowl-shadow:#D7D2C8;
+
+    --color-broth:#D97B1F;
+    --color-broth-dark:#9A4F13;
+
+    --color-noodle:#F6D26E;
+
+    --color-egg:#FFF7D6;
+    --color-yolk:#F9B100;
+
+    --color-green:#49C56A;
+
+    --color-shadow:rgba(0,0,0,.35);
+
+    --color-highlight:#FFFFFF;
+
+    --color-orange:#FF8F2A;
+
+    --color-red:#C0392B;
+
+    --color-fog:rgba(255,255,255,.05);
+
+    --color-steam:rgba(255,255,255,.75);
+
+
+
+    /*==============================
+      TYPOGRAPHY
+    ==============================*/
+
+    --font-heading:'Cormorant Garamond', serif;
+
+    --font-body:'Inter', sans-serif;
+
+
+
+    /*==============================
+      SPACING
+    ==============================*/
+
+    --radius-xl:40px;
+    --radius-round:50%;
+
+    --container-width:1300px;
+
+
+
+    /*==============================
+      TRANSITIONS
+    ==============================*/
+
+    --transition-fast:.3s ease;
+
+    --transition-normal:.6s ease;
+
+    --transition-slow:1.2s ease;
+
+
+
+    /*==============================
+      SHADOWS
+    ==============================*/
+
+    --shadow-soft:
+        0 12px 30px rgba(0,0,0,.18);
+
+    --shadow-large:
+        0 30px 60px rgba(0,0,0,.30);
+
+    --glow-orange:
+        0 0 30px rgba(255,140,0,.30);
+
+    --glow-white:
+        0 0 30px rgba(255,255,255,.15);
+
+
+
+    /*==============================
+      Z-INDEX
+    ==============================*/
+
+    --z-background:0;
+
+    --z-fog:5;
+
+    --z-rain:10;
+
+    --z-particles:20;
+
+    --z-lantern:40;
+
+    --z-title:60;
+
+    --z-steam:80;
+
+    --z-bowl:100;
+
+    --z-table:120;
+
+}

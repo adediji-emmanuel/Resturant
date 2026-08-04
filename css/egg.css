@@ -1,1 +1,95 @@
+/*==========================================================
+EGG
+==========================================================*/
 
+.egg{
+
+    position:absolute;
+
+    width:105px;
+
+    height:82px;
+
+    right:80px;
+
+    top:-2px;
+
+    z-index:10;
+
+}
+
+/* White */
+
+.egg-white{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+
+            #ffffff,
+
+            #ececec
+
+        );
+
+}
+
+/* Yolk */
+
+.egg-yolk{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            #ffd962,
+
+            #ffae00
+
+        );
+
+}
+
+/* Shine */
+
+.egg-shine{
+
+    position:absolute;
+
+    width:18px;
+
+    height:9px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(255,255,255,.65);
+
+    left:58px;
+
+    top:18px;
+
+}

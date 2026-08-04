@@ -1,1 +1,123 @@
+/*==========================================================
+    PREMIUM STEAM SYSTEM
+==========================================================*/
 
+.steam-container{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:285px;
+
+    transform:translateX(-50%);
+
+    width:420px;
+
+    height:330px;
+
+    pointer-events:none;
+
+    z-index:var(--z-steam);
+
+    overflow:visible;
+
+}
+
+/*==========================================================
+BASE STEAM
+==========================================================*/
+
+.steam{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:22px;
+
+    height:90px;
+
+    border-radius:999px;
+
+    background:
+
+        radial-gradient(
+
+            ellipse,
+
+            rgba(255,255,255,.65),
+
+            rgba(255,255,255,.12),
+
+            transparent
+
+        );
+
+    filter:blur(10px);
+
+    opacity:0;
+
+    transform-origin:center bottom;
+
+    animation:
+
+        steamRise linear infinite;
+
+}
+
+/*==========================================================
+STEAM POSITIONS
+==========================================================*/
+
+.s1{left:40px;animation-duration:7s;animation-delay:0s;}
+
+.s2{left:70px;animation-duration:8s;animation-delay:2s;}
+
+.s3{left:95px;animation-duration:6.8s;animation-delay:4s;}
+
+.s4{left:120px;animation-duration:7.5s;animation-delay:1.3s;}
+
+.s5{left:150px;animation-duration:9s;animation-delay:3.2s;}
+
+.s6{left:170px;animation-duration:6.4s;animation-delay:5s;}
+
+.s7{left:195px;animation-duration:8.2s;animation-delay:2.6s;}
+
+.s8{left:215px;animation-duration:7.3s;animation-delay:1s;}
+
+.s9{left:240px;animation-duration:9.4s;animation-delay:6s;}
+
+.s10{left:265px;animation-duration:8.5s;animation-delay:3.7s;}
+
+.s11{left:290px;animation-duration:7.2s;animation-delay:.5s;}
+
+.s12{left:310px;animation-duration:8.6s;animation-delay:2.3s;}
+
+.s13{left:330px;animation-duration:6.6s;animation-delay:5.2s;}
+
+.s14{left:345px;animation-duration:7.8s;animation-delay:1.8s;}
+
+.s15{left:360px;animation-duration:9.1s;animation-delay:4.5s;}
+
+.s16{left:185px;animation-duration:10s;animation-delay:7s;}
+
+.s17{left:145px;animation-duration:7.7s;animation-delay:8s;}
+
+.s18{left:225px;animation-duration:8.8s;animation-delay:9s;}
+
+.s19{left:90px;animation-duration:9.5s;animation-delay:6.5s;}
+
+.s20{left:305px;animation-duration:7.9s;animation-delay:10s;}
+
+/*==========================================================
+    STEAM BOOST
+==========================================================*/
+
+.steam-active .steam{
+
+    animation-duration:5.5s;
+
+    filter:blur(12px);
+
+}

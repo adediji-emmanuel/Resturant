@@ -1,1 +1,64 @@
+.spoon{
 
+    position:absolute;
+
+    right:-65px;
+
+    top:45px;
+
+    width:180px;
+
+    height:90px;
+
+    transform:rotate(24deg);
+
+    z-index:2;
+
+}
+
+.spoon-handle{
+
+    position:absolute;
+
+    width:120px;
+
+    height:12px;
+
+    background:
+
+    linear-gradient(
+
+        #fefefe,
+
+        #dadada
+
+    );
+
+    top:34px;
+
+    left:0;
+
+}
+
+.spoon-head{
+
+    position:absolute;
+
+    right:0;
+
+    width:58px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+        white,
+
+        #dedede
+
+    );
+}

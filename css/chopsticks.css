@@ -1,0 +1,41 @@
+.chopsticks{
+
+    position:absolute;
+
+    top:-105px;
+
+    left:205px;
+
+    transform:rotate(-24deg);
+
+    z-index:30;
+
+}
+
+.stick{
+
+    position:absolute;
+
+    width:260px;
+
+    height:6px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            #8c5b34,
+
+            #4c2b17
+
+        );
+
+}
+
+.stick-right{
+
+    top:14px;
+
+}

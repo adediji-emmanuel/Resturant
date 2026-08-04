@@ -1,1 +1,159 @@
+/* ==========================================================
+   BACKGROUND
+========================================================== */
 
+.background{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:var(--z-background);
+
+    overflow:hidden;
+
+}
+
+
+
+/*======================================
+SKY
+======================================*/
+
+.sky-gradient{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at top,
+            #24304B 0%,
+            #101522 25%,
+            #090B11 55%,
+            #040507 100%);
+
+}
+
+
+
+/*======================================
+MOON GLOW
+======================================*/
+
+.moon-glow{
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    left:50%;
+
+    top:-260px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(255,255,255,.18),
+            transparent 70%);
+
+    filter:blur(20px);
+
+}
+
+
+
+/*======================================
+FOG
+======================================*/
+
+.fog{
+
+    position:absolute;
+
+    width:1600px;
+
+    height:550px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(255,255,255,.05),
+        transparent 70%);
+
+    filter:blur(70px);
+
+}
+
+.fog-1{
+
+    left:-200px;
+
+    bottom:-120px;
+
+}
+
+.fog-2{
+
+    right:-250px;
+
+    bottom:-100px;
+
+}
+
+.fog-3{
+
+    left:20%;
+
+    bottom:-180px;
+
+}
+
+
+
+/*======================================
+VIGNETTE
+======================================*/
+
+.vignette{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle,
+        transparent 45%,
+        rgba(0,0,0,.55));
+
+}
+
+.fog-1{
+
+    animation:
+        fogFloat 18s ease-in-out infinite alternate;
+
+}
+
+.fog-2{
+
+    animation:
+        fogFloat 24s ease-in-out infinite alternate-reverse;
+
+}
+
+.fog-3{
+
+    animation:
+        fogFloat 30s ease-in-out infinite alternate;
+
+}

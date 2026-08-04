@@ -1,1 +1,283 @@
+/*==========================================================
+    RESPONSIVE DESIGN
+==========================================================*/
 
+/* ==========================================================
+   LARGE DESKTOP
+==========================================================*/
+
+@media (min-width:1600px){
+
+    .hero h1{
+
+        font-size:8rem;
+
+    }
+
+    .bowl-wrapper{
+
+        transform:scale(1.15);
+
+    }
+
+    .steam-container{
+
+        transform:translateX(-50%) scale(1.12);
+
+    }
+
+}
+
+/* ==========================================================
+   LAPTOP
+==========================================================*/
+
+@media (max-width:1400px){
+
+    .hero h1{
+
+        font-size:clamp(4rem,8vw,6rem);
+
+    }
+
+    .bowl-wrapper{
+
+        transform:scale(.95);
+
+    }
+
+}
+
+/* ==========================================================
+   SMALL LAPTOP
+==========================================================*/
+
+@media (max-width:1200px){
+
+    .lantern{
+
+        transform:scale(.9);
+
+    }
+
+    .lantern-left{
+
+        left:4%;
+
+    }
+
+    .lantern-right{
+
+        right:4%;
+
+    }
+
+    .bowl-wrapper{
+
+        transform:scale(.88);
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+    .hero-text{
+
+        top:6%;
+
+    }
+
+    .hero h1{
+
+        font-size:4rem;
+
+    }
+
+    .subtitle{
+
+        letter-spacing:.25rem;
+
+    }
+
+    .description{
+
+        font-size:.95rem;
+
+    }
+
+    .lantern{
+
+        transform:scale(.75);
+
+    }
+
+    .bowl-wrapper{
+
+        transform:scale(.75);
+
+    }
+
+    .steam-container{
+
+        transform:translateX(-50%) scale(.75);
+
+    }
+
+    .table{
+
+        height:220px;
+
+    }
+
+}
+
+/* ==========================================================
+   MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+
+    .hero-text{
+
+        width:90%;
+
+        top:5%;
+
+    }
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+        line-height:1;
+
+    }
+
+    .subtitle{
+
+        font-size:.75rem;
+
+    }
+
+    .description{
+
+        font-size:.9rem;
+
+    }
+
+    .lantern{
+
+        transform:scale(.58);
+
+    }
+
+    .lantern-left{
+
+        left:-10px;
+
+    }
+
+    .lantern-right{
+
+        right:-10px;
+
+    }
+
+    .bowl-wrapper{
+
+        transform:scale(.62);
+
+    }
+
+    .steam-container{
+
+        transform:translateX(-50%) scale(.65);
+
+    }
+
+    footer{
+
+        font-size:.65rem;
+
+        letter-spacing:.08rem;
+
+    }
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+    .hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.68rem;
+
+    }
+
+    .description{
+
+        font-size:.82rem;
+
+    }
+
+    .bowl-wrapper{
+
+        transform:scale(.5);
+
+    }
+
+    .steam-container{
+
+        transform:translateX(-50%) scale(.52);
+
+    }
+
+    .table{
+
+        height:170px;
+
+    }
+
+    .lantern{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================================
+   REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

@@ -1,1 +1,193 @@
+/* ==========================================================
+   JAPANESE LANTERNS
+========================================================== */
 
+.lantern{
+
+    position:absolute;
+
+    width:140px;
+
+    height:280px;
+
+    top:35px;
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-direction:column;
+
+    transform-origin:top center;
+
+    z-index:var(--z-lantern);
+
+}
+
+.lantern-left{
+
+    left:9%;
+
+}
+
+.lantern-right{
+
+    right:9%;
+
+}
+
+/* Rope */
+
+.lantern-rope{
+
+    width:4px;
+    height:60px;
+
+    background:#544536;
+
+}
+
+/* Top */
+
+.lantern-top{
+
+    width:70px;
+    height:14px;
+
+    border-radius:999px;
+
+    background:#2f2117;
+
+    box-shadow:
+        0 2px 3px rgba(255,255,255,.08) inset;
+
+}
+
+/* Body */
+
+.lantern-body{
+
+    position:relative;
+
+    width:110px;
+    height:150px;
+
+    margin-top:3px;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+        90deg,
+
+        #ff9a3d,
+
+        #ffbf58,
+
+        #ffe4ab,
+
+        #ffbf58,
+
+        #ff9a3d);
+
+    box-shadow:
+
+        0 0 50px rgba(255,150,60,.45),
+
+        inset 0 0 20px rgba(255,255,255,.35);
+
+}
+
+/* Vertical lines */
+
+.lantern-body span{
+
+    position:absolute;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:
+
+        rgba(0,0,0,.18);
+
+}
+
+.lantern-body span:nth-child(1){
+
+    left:24%;
+
+}
+
+.lantern-body span:nth-child(2){
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.lantern-body span:nth-child(3){
+
+    right:24%;
+
+}
+
+/* Bottom */
+
+.lantern-bottom{
+
+    width:55px;
+
+    height:16px;
+
+    background:#2f2117;
+
+    border-radius:999px;
+
+}
+
+/* Light */
+
+.lantern-glow{
+
+    position:absolute;
+
+    width:340px;
+
+    height:340px;
+
+    top:20px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(255,180,80,.35),
+            transparent 70%);
+
+    filter:blur(35px);
+
+    z-index:-1;
+
+}
+
+.lantern{
+
+    animation:
+        lanternSwing 6s ease-in-out infinite;
+
+}
+
+.lantern-glow{
+
+    animation:
+        lanternGlow 4s ease-in-out infinite;
+
+}
