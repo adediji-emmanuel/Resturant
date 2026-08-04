@@ -1,193 +1,33 @@
 /*==========================================================
-    THE SOUL OF RAMEN
-    MASTER STYLESHEET
+    GLOBAL POLISH
 ==========================================================*/
-
-/*----------------------------------------------------------
-GLOBAL
-----------------------------------------------------------*/
-
-html{
-
-    background:#050608;
-
-}
 
 body{
 
     background:
-        radial-gradient(
-            circle at top,
-            #1b2330,
-            #090b10 55%,
-            #050608 100%
-        );
-
-    color:#fff;
-
-    overflow:hidden;
+        radial-gradient(circle at top,#1b2333 0%,#06070b 65%);
 
 }
 
-/*----------------------------------------------------------
-SCENE
-----------------------------------------------------------*/
+/* Smooth rendering */
 
 .scene{
 
-    position:relative;
-
-    width:100vw;
-
-    height:100vh;
-
-    perspective:1800px;
-
-    transform-style:preserve-3d;
-
-    transition:
-
-        transform .35s ease-out;
+    perspective:1400px;
 
 }
 
-/*----------------------------------------------------------
-GLOBAL GLOW
-----------------------------------------------------------*/
-
-.scene::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    pointer-events:none;
-
-    background:
-
-        radial-gradient(
-
-            circle at center,
-
-            rgba(255,180,70,.03),
-
-            transparent 70%
-
-        );
-
-    mix-blend-mode:screen;
-
-    z-index:2;
-
-}
-
-/*----------------------------------------------------------
-FILM GRAIN
-----------------------------------------------------------*/
-
-.scene::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    pointer-events:none;
-
-    opacity:.04;
-
-    background-image:
-
-        radial-gradient(#ffffff 1px, transparent 1px);
-
-    background-size:
-
-        6px 6px;
-
-    mix-blend-mode:overlay;
-
-}
-
-/*----------------------------------------------------------
-TYPOGRAPHY
-----------------------------------------------------------*/
-
-.hero h1{
-
-    letter-spacing:.03em;
-
-    text-shadow:
-
-        0 0 8px rgba(255,255,255,.12),
-
-        0 0 30px rgba(255,170,60,.15),
-
-        0 0 80px rgba(255,140,30,.08);
-
-}
-
-.subtitle{
-
-    text-shadow:
-
-        0 0 10px rgba(255,255,255,.08);
-
-}
-
-.description{
-
-    max-width:560px;
-
-    margin-inline:auto;
-
-    line-height:1.8;
-
-}
-
-/*----------------------------------------------------------
-SMOOTH ANIMATION
-----------------------------------------------------------*/
-
-*{
-
-    backface-visibility:hidden;
-
-    -webkit-font-smoothing:antialiased;
-
-    -moz-osx-font-smoothing:grayscale;
-
-}
-
-/*----------------------------------------------------------
-FOCUS
-----------------------------------------------------------*/
-
-:focus-visible{
-
-    outline:2px solid #ffb347;
-
-    outline-offset:4px;
-
-}
-
-/*----------------------------------------------------------
-SELECTION
-----------------------------------------------------------*/
+/* Selection */
 
 ::selection{
 
-    background:#ffb347;
+    background:#ffb54a;
 
     color:#111;
 
 }
 
-/*----------------------------------------------------------
-SCROLLBAR
-----------------------------------------------------------*/
+/* Scrollbar (future-proof) */
 
 ::-webkit-scrollbar{
 
@@ -197,82 +37,52 @@ SCROLLBAR
 
 ::-webkit-scrollbar-track{
 
-    background:#101010;
+    background:#111;
 
 }
 
 ::-webkit-scrollbar-thumb{
 
-    background:#65432a;
+    background:#6a4a2b;
 
-    border-radius:999px;
+    border-radius:20px;
 
 }
 
 ::-webkit-scrollbar-thumb:hover{
 
-    background:#8c5f39;
+    background:#9b6b42;
 
 }
 
-/*----------------------------------------------------------
-HELPER CLASSES
-----------------------------------------------------------*/
+/* Improve text rendering */
 
-.hidden{
-
-    display:none !important;
-
-}
-
-.sr-only{
-
-    position:absolute;
-
-    width:1px;
-
-    height:1px;
-
-    padding:0;
-
-    margin:-1px;
-
-    overflow:hidden;
-
-    clip:rect(0,0,0,0);
-
-    white-space:nowrap;
-
-    border:0;
-
-}
-
-.no-select{
+.hero h1,
+.subtitle,
+.description{
 
     user-select:none;
 
 }
 
-.pointer-none{
+/* Slight title glow */
 
-    pointer-events:none;
+.hero h1{
+
+    text-shadow:
+
+        0 0 8px rgba(255,255,255,.08),
+
+        0 0 30px rgba(255,180,80,.08);
 
 }
 
-/*----------------------------------------------------------
-REDUCED MOTION
-----------------------------------------------------------*/
+/* Prevent image dragging if added later */
 
-@media (prefers-reduced-motion:reduce){
+img{
 
-    *,
-    *::before,
-    *::after{
+    user-select:none;
 
-        animation:none !important;
-
-        transition:none !important;
-
-    }
+    -webkit-user-drag:none;
 
 }

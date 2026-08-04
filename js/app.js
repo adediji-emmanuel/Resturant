@@ -1,120 +1,25 @@
-/*==========================================================
-    THE SOUL OF RAMEN
-    Minimal JavaScript
-    CSS First • JS Enhancement Only
-==========================================================*/
+/*
+==========================================================
+The Soul of Ramen
+Minimal JavaScript
+==========================================================
+*/
 
-(() => {
-    "use strict";
+const scene = document.querySelector(".scene");
 
-    const scene = document.querySelector(".scene");
-    const bowl = document.querySelector(".bowl-wrapper");
-    const lanterns = document.querySelectorAll(".lantern");
-    const steam = document.querySelector(".steam-container");
+document.addEventListener("mousemove", (e)=>{
 
-    let mouseX = 0;
-    let mouseY = 0;
+    const x = (e.clientX / window.innerWidth - 0.5) * 8;
+    const y = (e.clientY / window.innerHeight - 0.5) * 6;
 
-    let currentX = 0;
-    let currentY = 0;
+    scene.style.transform =
+        `rotateY(${x}deg) rotateX(${-y}deg)`;
 
-    const strength = 6;
+});
 
-    /*======================================================
-        PARALLAX
-    ======================================================*/
+document.addEventListener("mouseleave", ()=>{
 
-    function updateParallax() {
+    scene.style.transform =
+        "rotateX(0deg) rotateY(0deg)";
 
-        currentX += (mouseX - currentX) * 0.08;
-        currentY += (mouseY - currentY) * 0.08;
-
-        scene.style.transform = `
-            perspective(1800px)
-            rotateY(${currentX * strength}deg)
-            rotateX(${currentY * -strength}deg)
-        `;
-
-        if (bowl) {
-
-            bowl.style.transform = `
-                translateX(${currentX * 8}px)
-                translateY(${currentY * 4}px)
-            `;
-
-        }
-
-        if (steam) {
-
-            steam.style.transform = `
-                translateX(calc(-50% + ${currentX * 10}px))
-            `;
-
-        }
-
-        lanterns.forEach((lantern, index) => {
-
-            const direction = index === 0 ? -1 : 1;
-
-            lantern.style.transform = `
-                translateX(${currentX * 6 * direction}px)
-                rotate(${currentX * 3 * direction}deg)
-            `;
-
-        });
-
-        requestAnimationFrame(updateParallax);
-
-    }
-
-    updateParallax();
-
-    document.addEventListener("mousemove", (e) => {
-
-        mouseX = (e.clientX / window.innerWidth) - 0.5;
-        mouseY = (e.clientY / window.innerHeight) - 0.5;
-
-    });
-
-    document.addEventListener("mouseleave", () => {
-
-        mouseX = 0;
-        mouseY = 0;
-
-    });
-
-    /*======================================================
-        BOWL HOVER
-    ======================================================*/
-
-    if (bowl && steam) {
-
-        bowl.addEventListener("mouseenter", () => {
-
-            steam.classList.add("steam-active");
-
-        });
-
-        bowl.addEventListener("mouseleave", () => {
-
-            steam.classList.remove("steam-active");
-
-        });
-
-    }
-
-    /*======================================================
-        REDUCED MOTION
-    ======================================================*/
-
-    const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    );
-
-    if (prefersReducedMotion.matches) {
-
-        scene.style.transform = "none";
-
-    }
-
-})();
+});
